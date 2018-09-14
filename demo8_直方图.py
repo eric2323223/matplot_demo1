@@ -10,10 +10,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 x=np.arange(10)
-y = 2**x +10
+y = 2*x +10
+print(x)
+y[5]=-10
+plt.bar(x,y,facecolor='b',edgecolor='r')
 
-plt.bar(x,y,facecolor='red',edgecolor='b')
-
-for x,y in zip(x,y):
-    plt.text(x,y,'%.2f'%y,ha='center',va='bottom')
+for x,y in zip(x,y): #zip-->把x,y结合一个整体，一次读取x,y值
+    plt.text(x,y,'%.3f'%y,ha='center',va='bottom')
 plt.show()
